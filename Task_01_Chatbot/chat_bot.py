@@ -1,7 +1,5 @@
-try:
-    exit={"bye","quit","end","stop","terminate"}
-    def response(chat):
-    
+exit={"bye","quit","end","stop","terminate"}
+def response(chat):    
         if "hi" in chat:
             return "Hello! How can I'm here to help you today?"
         elif "how are you" in chat:
@@ -22,13 +20,8 @@ try:
             return "Hi! Let's see how I can assist you today."
         else:
             return "I'm sorry, I didn't understand that. Can you please try again?"
-
-
-
-
-    print("Welcome to the Chatbot!")
-
-
+try:    
+    print("Welcome to the Chatbot!!!")
     while True:
         user_input =input("You: ")
         chat=user_input.lower()
@@ -38,7 +31,6 @@ try:
         else:
             responsed= response(chat)
             print("Bot:", responsed)
-
 
 except:
     print("Bot: I may be out of servise???")
