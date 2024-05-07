@@ -1,10 +1,6 @@
-
-
-
 import pygame
 import sys
 
-# Constants
 WIDTH, HEIGHT = 300, 300
 ROWS, COLS = 3, 3
 SQUARE_SIZE = WIDTH // COLS
@@ -14,13 +10,13 @@ RED = (255, 0, 0)
 BLUE = (0, 0, 255)
 FPS = 60
 
-# Initialize Pygame
+
 pygame.init()
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Tic Tac Toe")
 clock = pygame.time.Clock()
 
-# Fonts
+
 FONT = pygame.font.SysFont(None, 40)
 
 # Board
@@ -134,6 +130,4 @@ def main():
             else:
                 turn = 'X'
             draw_board()
-
-if __name__ == "__main__":
-    main()
+main()
