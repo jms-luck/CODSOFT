@@ -37,15 +37,13 @@ def draw_board():
     pygame.display.update()
 
 def is_winner(board, player):
-    # Check rows
     for row in range(ROWS):
         if all(cell == player for cell in board[row]):
             return True
-    # Check columns
     for col in range(COLS):
         if all(board[row][col] == player for row in range(ROWS)):
             return True
-    # Check diagonals
+    
     if all(board[i][i] == player for i in range(ROWS)):
         return True
     if all(board[i][COLS-i-1] == player for i in range(ROWS)):
