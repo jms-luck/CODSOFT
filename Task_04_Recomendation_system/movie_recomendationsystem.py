@@ -1,4 +1,7 @@
-class SimpleRecommendationSystem:
+Sure, here's the code without comments:
+
+```python
+class MovieRecommendationSystem:
     def __init__(self, items):
         self.items = items
 
@@ -10,7 +13,6 @@ class SimpleRecommendationSystem:
         return recommended_items
 
 
-# Sample data: movies and their genres
 movies = {
     "Toy Story (1995)": ["Adventure", "Animation", "Children", "Comedy", "Fantasy"],
     "Jumanji (1995)": ["Adventure", "Children", "Fantasy"],
@@ -35,14 +37,13 @@ movies = {
     "Get Shorty (1995)": ["Comedy", "Crime", "Thriller"]
 }
 
-# Create recommendation system
-recommendation_system = SimpleRecommendationSystem(movies)
+recommendation_system = MovieRecommendationSystem(movies)
 
-# Get user preferences
-user_preferences = input("Enter your movie preferences (separated by commas): ").strip().split(',')
+user_input = input("Enter your movie preferences (separated by commas): ")
+user_preferences = [preference.strip() for preference in user_input.split(',')]
 
-# Get recommendations
 recommendations = recommendation_system.recommend(user_preferences)
 print("Recommended movies:")
 for movie in recommendations:
     print("-", movie)
+```
