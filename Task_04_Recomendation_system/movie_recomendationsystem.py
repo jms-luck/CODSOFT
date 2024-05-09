@@ -1,15 +1,12 @@
 class MovieRecommendationSystem:
     def __init__(self, items):
         self.items = items
-
     def recommend(self, preference):
         recommendation = []
         for item, genres in self.items.items():
             if any(genre in preference for genre in genres):
                 recommendation.append(item)
         return recommendation
-
-
 movies = {
     "Toy Story (1995)": ["Adventure", "Animation", "Children", "Comedy", "Fantasy"],
     "Jumanji (1995)": ["Adventure", "Children", "Fantasy"],
@@ -31,14 +28,10 @@ movies = {
     "Four Rooms (1995)": ["Comedy"],
     "Ace Ventura: When Nature Calls (1995)": ["Comedy"],
     "Money Train (1995)": ["Action", "Comedy", "Crime", "Drama", "Thriller"],
-    "Get Shorty (1995)": ["Comedy", "Crime", "Thriller"]
-}
-
+    "Get Shorty (1995)": ["Comedy", "Crime", "Thriller"]}
 recommendation_system = MovieRecommendationSystem(movies)
-
 user_input = input("Enter your movie preferences (separated by commas): ")
 preference = [p.strip() for p in user_input.split(',')]
-
 recommendation = recommendation_system.recommend(preference)
 print("Recommended movies:")
 for movie in recommendation:
