@@ -7,7 +7,7 @@ class MovieRecommendationSystem:
             if any(genre in preference for genre in genres):
                 recommendation.append(item)
         return recommendation
-movies = {
+recomendations = {
     "Toy Story (1995)": ["Adventure", "Animation", "Children", "Comedy", "Fantasy"],
     "Jumanji (1995)": ["Adventure", "Children", "Fantasy"],
     "Grumpier Old Men (1995)": ["Comedy", "Romance"],
@@ -29,7 +29,7 @@ movies = {
     "Ace Ventura: When Nature Calls (1995)": ["Comedy"],
     "Money Train (1995)": ["Action", "Comedy", "Crime", "Drama", "Thriller"],
     "Get Shorty (1995)": ["Comedy", "Crime", "Thriller"]}
-recommendation_system = MovieRecommendationSystem(movies)
+recommendation_system = MovieRecommendationSystem(recomendations)
 user_input = input("Enter your movie preferences (separated by commas): ")
 preference = [p.strip() for p in user_input.split(',')]
 recommendation = recommendation_system.recommend(preference)
