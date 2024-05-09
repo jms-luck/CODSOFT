@@ -1,6 +1,3 @@
-Sure, here's the code without comments:
-
-```python
 class MovieRecommendationSystem:
     def __init__(self, items):
         self.items = items
