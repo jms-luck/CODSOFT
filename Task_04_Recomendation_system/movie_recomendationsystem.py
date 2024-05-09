@@ -3,11 +3,11 @@ class MovieRecommendationSystem:
         self.items = items
 
     def recommend(self, preference):
-        recommendations = []
+        recommendation = []
         for item, genres in self.items.items():
             if any(genre in preference for genre in genres):
-                recommendations.append(item)
-        return recommendations
+                recommendation.append(item)
+        return recommendation
 
 
 movies = {
@@ -39,7 +39,7 @@ recommendation_system = MovieRecommendationSystem(movies)
 user_input = input("Enter your movie preferences (separated by commas): ")
 preference = [p.strip() for p in user_input.split(',')]
 
-recommendations = recommendation_system.recommend(preference)
+recommendation = recommendation_system.recommend(preference)
 print("Recommended movies:")
-for movie in recommendations:
+for movie in recommendation:
     print("-", movie)
